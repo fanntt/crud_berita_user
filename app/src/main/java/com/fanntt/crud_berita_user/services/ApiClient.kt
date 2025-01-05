@@ -10,7 +10,7 @@ import java.util.Arrays
 object ApiClient {
 //    http://10.208.104.237:8080/beritaDb/getBerita.php
 
-    private const val BASE_URL = "http://192.168.16.234/beritaDb/"
+    private const val BASE_URL = "http://192.168.168.234/beritaDb/"
 
      val retrofit: BeritaServices by lazy {
         Retrofit.Builder()

@@ -40,7 +40,7 @@ class BeritaAdapter(
             txtIsiBerita.text = berita.isi_berita
             txtTglBerita.text = berita.tgl_berita
             //untuk menampilkan gambar pad widget (fetching gambar dengan glide)
-            Glide.with(itemView).load("http://192.168.16.234/beritaDb/gambar_berita/"
+            Glide.with(itemView).load("http://192.168.168.234/beritaDb/gambar_berita/"
             + berita.gambar_berita).centerCrop().into(imgBerita)
         }
     }

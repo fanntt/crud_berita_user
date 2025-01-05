@@ -33,9 +33,7 @@ class RegisterScreenActivity : AppCompatActivity() {
         val btnRegister : Button = findViewById(R.id.btnRegister)
 
         btnRegister.setOnClickListener(){
-            val toLogin = Intent(this@RegisterScreenActivity,
-                ListUser::class.java)
-            startActivity(toLogin)
+
            // get data ke widget
             val username = etUsername.text.toString()
             val fullName = etFullname.text.toString()
@@ -57,7 +55,9 @@ class RegisterScreenActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT).show()
                            // kelas bisa arahkan ketika dia berhasil register pindah ke login \
                            //tambahkan intent
-
+                           val toLogin = Intent(this@RegisterScreenActivity,
+                               ListUser::class.java)
+                           startActivity(toLogin)
                        }else{
                            val errorMessage = response.errorBody()?.string() ?:"Unknown Error"
                            Log.e("Register Error", errorMessage)
